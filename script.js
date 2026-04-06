@@ -12,10 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const windEl = document.getElementById('wind');
     const aqiEl = document.getElementById('aqi');
     const errorEl = document.getElementById('error');
-    const dayPeriodSelect = document.getElementById('day-period');
-    const weekDaySelect = document.getElementById('week-day');
-    const brightnessSlider = document.getElementById('brightness');
-    const brightnessValue = document.getElementById('brightness-value');
     const ctx = document.getElementById('weatherChart').getContext('2d');
 
     let weatherChart;
@@ -88,26 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     initMap();
-
-    brightnessSlider.addEventListener('input', () => {
-        document.body.style.filter = `brightness(${brightnessSlider.value}%)`;
-        brightnessValue.textContent = `${brightnessSlider.value}%`;
-    });
-
-    dayPeriodSelect.addEventListener('change', () => {
-        updateTimeDisplay();
-    });
-
-    weekDaySelect.addEventListener('change', () => {
-        updateTimeDisplay();
-    });
-
-    function updateTimeDisplay() {
-        const dayPeriod = dayPeriodSelect.value;
-        const weekDay = weekDaySelect.value;
-        const scheduleMsg = `Showing ${dayPeriod} weather for ${weekDay}.`;
-        document.getElementById('time-info').textContent = scheduleMsg;
-    }
 
     function updateMap(lat, lon, name) {
         currentLat = lat;
@@ -186,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 createChart(data);
                 updateMap(data.location.lat, data.location.lon, data.location.name);
                 updateCurrentDate();
-                updateTimeDisplay();
                 fetchForecast(data.location.lat, data.location.lon);
                 weatherInfo.classList.remove('hidden');
                 errorEl.classList.add('hidden');
