@@ -4,20 +4,21 @@ A modern, responsive weather forecast web app built with HTML, CSS, JavaScript, 
 
 ## 🚀 Features
 
-- Search weather by city name (via WeatherAPI)
-- Display current weather details:
+- Search weather by city name using WeatherAPI
+- Current weather details:
   - Temperature (°C)
   - Condition
   - Humidity
   - Wind speed
   - Air quality (PM2.5)
-- Interactive chart (Chart.js) for core weather metrics
-- Location map (Leaflet + OpenStreetMap)
+- Interactive Chart.js bar chart of current weather metrics
+- 7-day weather forecast with responsive forecast cards
+- Location map powered by Leaflet + OpenStreetMap
 - "Use My Location" geolocation support
-- "View on Google Maps" button for route & details
+- "View on Google Maps" button for quick map lookup
 - Dark mode toggle with localStorage persistence
-- Responsive and professional UI with mobile support
-- Error handling for API issues and invalid input
+- Clean, uncluttered UI with mobile-responsive layout
+- Error handling for invalid input and API issues
 
 ## 🛠️ Tech Stack
 
@@ -26,7 +27,7 @@ A modern, responsive weather forecast web app built with HTML, CSS, JavaScript, 
 - JavaScript (ES6)
 - Chart.js (data visualization)
 - Leaflet (interactive map)
-- WeatherAPI (current weather data)
+- WeatherAPI (current weather and forecast)
 
 ## 🔧 Setup
 
@@ -37,7 +38,7 @@ git clone https://github.com/<your-username>/weather-app.git
 cd weather-app
 ```
 
-2. Open `index.html` in your browser (or use Live Server extension in VS Code)
+2. Open `index.html` in your browser, or use the Live Server extension in VS Code.
 
 3. Enter a city and click `Search`, or click `Use My Location`.
 
@@ -49,25 +50,26 @@ WeatherAPI key is currently set in `script.js`:
 const apiKey = '88ffe77242d94a859f1182745260304';
 ```
 
-If needed, replace with your own WeatherAPI key.
+Replace it with your own WeatherAPI key if needed.
 
 ## 🗺️ Notes
 
-- Embedded map uses Leaflet + OpenStreetMap (no API key needed)
-- Google Maps button opens the location in Google Maps separately
+- The map uses Leaflet + OpenStreetMap, so no map API key is required.
+- The Google Maps button opens the current weather location in a separate tab.
+- The UI has been streamlined by removing extra time/day controls and brightness sliders.
 
 ## 📝 Project Flow
 
-1. User enters city or uses current location.
-2. App calls WeatherAPI to fetch current data.
-3. UI updates with weather info, chart, and map marker.
-4. User can switch themes and save preference.
+1. User searches for a city or uses geolocation.
+2. App fetches weather data from WeatherAPI.
+3. UI updates with current weather, a chart, a map marker, and forecast cards.
+4. Dark mode preference is saved in localStorage.
 
 ## 📁 Files
 
 - `index.html` - app structure
 - `styles.css` - styling
 - `script.js` - app logic
-- `README.md` - docs
+- `README.md` - documentation
 
  
