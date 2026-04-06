@@ -21,34 +21,6 @@
             <button id="search-btn">Search</button>
             <button id="location-btn" class="location-btn">📍 Use My Location</button>
         </div>
-        <div class="options-container">
-            <div class="option">
-                <label for="day-period">Time:</label>
-                <select id="day-period">
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="evening">Evening</option>
-                    <option value="night">Night</option>
-                </select>
-            </div>
-            <div class="option">
-                <label for="week-day">Day:</label>
-                <select id="week-day">
-                    <option value="Monday">Monday</option>
-                    <option value="Tuesday">Tuesday</option>
-                    <option value="Wednesday">Wednesday</option>
-                    <option value="Thursday">Thursday</option>
-                    <option value="Friday">Friday</option>
-                    <option value="Saturday">Saturday</option>
-                    <option value="Sunday">Sunday</option>
-                </select>
-            </div>
-            <div class="option brightness">
-                <label for="brightness">Brightness:</label>
-                <input type="range" id="brightness" min="50" max="150" value="100" />
-                <span id="brightness-value">100%</span>
-            </div>
-        </div>
         <div id="weather-info" class="weather-info hidden">
             <div class="location-header">
                 <h2 id="location"></h2>
@@ -58,7 +30,6 @@
                 <div class="temp">
                     <span id="temperature"></span>
                     <span id="condition"></span>
-                    <span id="time-info" class="time-info"></span>
                 </div>
                 <div class="details">
                     <p>Humidity: <span id="humidity"></span>%</p>
